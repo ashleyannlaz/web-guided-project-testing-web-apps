@@ -18,9 +18,9 @@ test("User can add a new animal by filling out the form", () => {
 
     // Act: fill out the form and click the button
     userEvent.type(speciesInput, "Deer");
-    userEvent.type(speciesInput, "Deer");
-    userEvent.type(speciesInput, "Deer");
-
+    userEvent.type(ageInput, "98");
+    userEvent.type(notesInput, "I love the band 98 Degrees");
+    userEvent.click(submitButton);
 
     // Assert
 });
