@@ -23,4 +23,6 @@ test("User can add a new animal by filling out the form", () => {
     userEvent.click(submitButton);
 
     // Assert
+    const newAnimal = screen.getByText(/deer/i); // implicit assertion here
+    expect(newAnimal).toBeInTheDocument();
 });
