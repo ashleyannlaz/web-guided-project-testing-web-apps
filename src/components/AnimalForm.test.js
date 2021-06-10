@@ -29,5 +29,5 @@ test("User can add a new animal by filling out the form", () => {
     // Example of asserting that something isn't in the DOM:
     const invisibleAnimal = screen.queryByText(/llama/i);
     expect(invisibleAnimal).toEqual(null);
-    expect(invisibleAnimal).not.toBeInTheDocument();
+    expect(invisibleAnimal).toBeFalsy();
 });
