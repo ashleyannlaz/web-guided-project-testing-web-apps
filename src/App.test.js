@@ -23,6 +23,7 @@ test("App component renders a header", () => {
     // implicit assertion here already that 1 and only 1 element with this text exists. But just to be extra safe, we can also:
 
     // Assert: make sure the expected behavior happened (and that unexpected behavior didn't happen! Multiple assertions preferred)
-    
+    expect(header).toBeTruthy();
+    expect(header).toBeInTheDocument();
 })
 
