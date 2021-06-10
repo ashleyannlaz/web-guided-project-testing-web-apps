@@ -15,5 +15,7 @@ test("App component renders", () => {
     // Assert: we already have the implicit assertion that the component renders above. If that render command errors out in any way, this test will fail
 });
 
-test("App component renders a header")
+test("App component renders a header", () => {
+    
+})
 
