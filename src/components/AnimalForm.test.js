@@ -16,7 +16,7 @@ test("User can add a new animal by filling out the form", () => {
     const notesInput = screen.getByLabelText(/notes/i);
     const submitButton = screen.getByRole('button', { name: /submit/i });
 
-    // Act: fill out the form and click the button
+    // Act: fill out the form and click the button (simulating user behavior with userEvent)
     userEvent.type(speciesInput, "Deer");
     userEvent.type(ageInput, "98");
     userEvent.type(notesInput, "I love the band 98 Degrees");
