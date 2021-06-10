@@ -35,6 +35,7 @@ const AnimalForm = ({ errors, touched, values }) => {
           id="species"
           type="text"
           name="species"
+          value={animal.species}
           onChange={event => handleChange(event)}
         />
         <label htmlFor="age">Age:</label>
