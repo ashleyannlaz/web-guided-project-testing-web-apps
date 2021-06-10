@@ -49,9 +49,8 @@ test("User can add multiple animals", () => {
     userEvent.click(submitButton);
 
     // Intermediate assertion: now we should have just deer, no llamas
-    const deer = screen.getByText(/deer/i);
-    const llama = screen.getByText(/llama/i); // implicit assertion here
-
+    expect(screen.getByText(/deer/i)).toBeInTheDocument();
+    expect(screen.queryByText(/llama/i)).toEqual(null);
 
     // Make sure the form clears on submit
     expect(speciesInput).toHaveValue("");
