@@ -13,6 +13,9 @@ test("User can add a new animal by filling out the form", () => {
     const speciesInput = screen.getByLabelText(/species/i);
     const ageInput = screen.getByLabelText(/age/i);
     const notesInput = screen.getByLabelText(/notes/i);
-
     const submitButton = getByRole('button', { name: /submit/i });
+
+    // Act: fill out the form and click the button
+
+    // Assert
 });
