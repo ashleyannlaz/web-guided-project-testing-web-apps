@@ -7,7 +7,7 @@ test("AnimalForm component renders without blowing up", () => {
     render(<AnimalForm />);
 });
 
-test("User can add a new animal by filling out the form", () => { 
+test("User can add a new animal by filling out the form", async () => { 
     // Arrange: render & grab the elements we need
     render(<AnimalForm />);
 
@@ -23,11 +23,11 @@ test("User can add a new animal by filling out the form", () => {
     userEvent.click(submitButton);
 
     // Assert
-    const newAnimal = screen.findByText(/deer/i); // implicit assertion here
+    const newAnimal = await screen.findByText(/deer/i); // implicit assertion here
     expect(newAnimal).toBeInTheDocument();
 
     // Example of asserting that something isn't in the DOM:
-    const invisibleAnimal = screen.queryByText(/llama/i);
+    const invisibleAnimal = await screen.queryByText(/llama/i);
     expect(invisibleAnimal).toEqual(null);
     expect(invisibleAnimal).toBeFalsy();
 });
