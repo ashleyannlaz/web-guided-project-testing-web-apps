@@ -19,7 +19,7 @@ test("App component renders a header", () => {
     // Arrange: setup and grab the virtual DOM elements we want to work with
     const matchers = render(<App />);
     // Act: click stuff, type into forms, etc
-    const header = matchers.getByText("Add New Animal");
+    const header = matchers.getByText("ADD NEW ANIMAL");
 
     // Assert: make sure the expected behavior happened (and that unexpected behavior didn't happen! Multiple assertions preferred)
 })
