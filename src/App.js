@@ -8,7 +8,6 @@ function App() {
     <div className="App">
       <h1>Add New Animal</h1>
       <AnimalForm />
-      <AnimalList />
     </div>
   );
 }
