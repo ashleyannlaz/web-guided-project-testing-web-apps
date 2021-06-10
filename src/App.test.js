@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import React from "react";
 import App from "./App";
 
@@ -17,9 +17,9 @@ test("App component renders", () => {
 
 test("App component renders a header", () => {
     // Arrange: setup and grab the virtual DOM elements we want to work with
-    const {getByText} = render(<App />);
+    render(<App />);
     // Act: click stuff, type into forms, etc
-    const header = getByText(/add new animal/i);
+    const header = screen.getByText(/add new animal/i);
     // implicit assertion here already that 1 and only 1 element with this text exists. But just to be extra safe, we can also:
 
     // Assert: make sure the expected behavior happened (and that unexpected behavior didn't happen! Multiple assertions preferred)
