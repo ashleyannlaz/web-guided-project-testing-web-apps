@@ -25,5 +25,9 @@ test("App component renders a header", () => {
     // Assert: make sure the expected behavior happened (and that unexpected behavior didn't happen! Multiple assertions preferred)
     expect(header).toBeTruthy();
     expect(header).toBeInTheDocument();
+
+    // other possible assertions:
+    expect(header).not.toHaveTextContent(/josh's animal fiesta/i);
+
 })
 
