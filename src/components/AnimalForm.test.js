@@ -25,4 +25,9 @@ test("User can add a new animal by filling out the form", () => {
     // Assert
     const newAnimal = screen.getByText(/deer/i); // implicit assertion here
     expect(newAnimal).toBeInTheDocument();
+
+    // Example of asserting that something isn't in the DOM:
+    const invisibleAnimal = screen.queryByText(/llama/i);
+    expect(invisibleAnimal).toEqual(null);
+    expect(invisibleAnimal).not.toBeInTheDocument();
 });
