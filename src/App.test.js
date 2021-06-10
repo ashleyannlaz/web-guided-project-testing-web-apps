@@ -8,7 +8,7 @@ import App from "./App";
 test("App component renders", () => {
     // do test things:
     // Arrange
-
+    console.log("Hi mom!");
     // Act
 
     // Assert
