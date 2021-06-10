@@ -1,3 +1,4 @@
+import { render } from "@testing-library/react";
 import React from "react";
 import App from "./App";
 
@@ -8,7 +9,7 @@ import App from "./App";
 test("App component renders", () => {
     // do test things:
     // Arrange
-    console.log("Hi mom!");
+    render(<App />);
     // Act
 
     // Assert
