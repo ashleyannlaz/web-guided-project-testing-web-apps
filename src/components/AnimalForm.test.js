@@ -48,6 +48,12 @@ test("User can add multiple animals", () => {
     userEvent.type(notesInput, "I'm the first animal and I love 98 Degrees");
     userEvent.click(submitButton);
 
+    // Intermediate assertion: now we should have just deer, no llamas
+    const deer = screen.getByText(/deer/i);
+    const llama = screen.getByText(/llama/i); // implicit assertion here
+
+
+    // Make sure the form clears on submit
     expect(speciesInput).toHaveValue("");
     expect(ageInput).toHaveValue("");
     expect(notesInput).toHaveValue("");
