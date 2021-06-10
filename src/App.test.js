@@ -28,6 +28,7 @@ test("App component renders a header", () => {
 
     // other possible assertions:
     expect(header).not.toHaveTextContent(/josh's animal fiesta/i);
-
+    expect(header).not.toBeFalsy();
+    expect(header).not.toEqual(null);
 })
 
