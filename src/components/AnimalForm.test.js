@@ -6,6 +6,11 @@ test("AnimalForm component renders without blowing up", () => {
     render(<AnimalForm />);
 });
 
-test("User can add a new animal by filling out the form", () => {
+test("User can add a new animal by filling out the form", () => { 
+    // Arrange: render & grab the elements we need
     render(<AnimalForm />);
+
+    const speciesInput = screen.getByLabelText
+
+    const submitButton = getByRole('button', { name: /submit/i });
 });
