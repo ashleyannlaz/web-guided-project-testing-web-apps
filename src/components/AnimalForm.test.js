@@ -54,11 +54,6 @@ test("User can add multiple animals", () => {
     userEvent.click(submitButton);
 
     // Assert
-    const newAnimal = screen.getByText(/deer/i); // implicit assertion here
-    expect(newAnimal).toBeInTheDocument();
-
-    // Example of asserting that something isn't in the DOM:
-    const invisibleAnimal = screen.queryByText(/llama/i);
-    expect(invisibleAnimal).toEqual(null);
-    expect(invisibleAnimal).toBeFalsy();
+    const deer = screen.getByText(/deer/i); // implicit assertion here
+    const llama = screen.getByText(/llama/i); // implicit assertion here
 });
