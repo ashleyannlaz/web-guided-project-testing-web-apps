@@ -45,7 +45,12 @@ test("User can add multiple animals", () => {
     // Act: fill out the form and click the button (simulating user behavior with userEvent)
     userEvent.type(speciesInput, "Deer");
     userEvent.type(ageInput, "98");
-    userEvent.type(notesInput, "I love the band 98 Degrees");
+    userEvent.type(notesInput, "I'm the first animal and I love 98 Degrees");
+    userEvent.click(submitButton);
+
+    userEvent.type(speciesInput, "Llama");
+    userEvent.type(ageInput, "3");
+    userEvent.type(notesInput, "Mama Llama is my favorite Migos song");
     userEvent.click(submitButton);
 
     // Assert
