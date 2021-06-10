@@ -9,7 +9,8 @@ import App from "./App";
 test("App component renders", () => {
     // do test things:
     // Arrange
-    render(<App />);
+    const stuff = render(<App />);
+    console.log(stuff);
     // Act
 
     // Assert
