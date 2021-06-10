@@ -48,6 +48,10 @@ test("User can add multiple animals", () => {
     userEvent.type(notesInput, "I'm the first animal and I love 98 Degrees");
     userEvent.click(submitButton);
 
+    expect(speciesInput).toHaveValue("");
+    expect(ageInput).toHaveValue("");
+    expect(notesInput).toHaveValue("");
+
     userEvent.type(speciesInput, "Llama");
     userEvent.type(ageInput, "3");
     userEvent.type(notesInput, "Mama Llama is my favorite Migos song");
