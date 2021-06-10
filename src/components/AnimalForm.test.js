@@ -10,7 +10,9 @@ test("User can add a new animal by filling out the form", () => {
     // Arrange: render & grab the elements we need
     render(<AnimalForm />);
 
-    const speciesInput = screen.getByLabelText
+    const speciesInput = screen.getByLabelText(/species/i);
+    const ageInput = screen.getByLabelText(/age/i);
+    const notesInput = screen.getByLabelText(/notes/i);
 
     const submitButton = getByRole('button', { name: /submit/i });
 });
