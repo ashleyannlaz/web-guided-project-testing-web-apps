@@ -1,7 +1,7 @@
 import React from "react";
 import App from "./App";
 
-test("name of the test", () => {
+test("App component", () => {
     // do test things:
     // Arrange
 
