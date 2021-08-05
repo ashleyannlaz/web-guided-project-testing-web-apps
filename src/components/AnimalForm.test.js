@@ -1,5 +1,5 @@
 import React from 'react';
-import { screen, render } from '@testing-library/react';
+import { screen, render, waitFor } from '@testing-library/react';
 import AnimalForm from './AnimalForm'
 import userEvent from '@testing-library/user-event'
 
@@ -33,7 +33,22 @@ test("When a form is fully filled out and submitted, species is displayed", ()=>
     userEvent.click(button);
 
     // Assert: what do we expect to happen? species should show up in current animals list
-    const newItem = screen.queryByText("grizzly bear");
-    expect(newItem).toBeInTheDocument();
+    const newItemPromise = screen.findByText("grizzly bear");
+    newItemPromise.then(newItem=>{
+        expect(newItem).toBeInTheDocument();
+        // QUESTIONS ABOUT THIS
+
+    });
+
+    // const newItem = await screen.findByText("grizzly bear")
+    // expect(newItem).toBeInTheDocument();
+
+    // await waitFor(() => {
+    //     const newItem = screen.queryByText("grizzly bear");
+    //     expect(newItem).toBeInTheDocument();
+    // })
+
 
 })
+
+// get by assumes something will break if its not there
